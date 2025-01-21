@@ -22,7 +22,7 @@ print(f"Raíces: {raices}")
 coeficientes = [1, -6, 11, -6]  # x^3 - 6x^2 + 11x - 6
 
 # Encuentra las raíces del polinomio
-raices = np.roots(coeficientes)
+raices2 = np.roots(coeficientes)
 
 # Muestra las raíces
-print(f"Raíces: {raices}")
+print(f"Raíces: {raices2}")
