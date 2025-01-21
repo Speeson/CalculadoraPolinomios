@@ -4,7 +4,7 @@ from sympy.plotting import plot
 
 def PolTaylor(a, n, func_str):
     x = sp.symbols('x')  # Definimos la variable X
-    f = sp.sympify(func_str)  # Convertimos la entrada de texto en una función simbólica
+    f = sp.sympify(func_str)  # Introduciremos la función a la cual nos querremos aproximar
     F = f  # Copia de la función original
     T = f.subs(x, a)  # Término independiente
     for k in range(1, n + 1):
@@ -15,9 +15,9 @@ def PolTaylor(a, n, func_str):
     print("\nPolinomio de Taylor:")
     print(sp.expand(T))  # Expande el polinomio para mostrarlo en su forma estándar
 
-    # Graficamos la función original y el polinomio de Taylor
+    # En este apartado se mostrará la función original y el polinomio de Taylor en una gráfica
     g = plot(F, T, (x, a - 3, a + 3), title='Polinomio de Taylor', show=False)
-    g[0].line_color = 'k'  # Color negro para la función original
+    g[0].line_color = 'g'  # Color verde para la función original
     g[1].line_color = 'r'  # Color rojo para el polinomio de Taylor
     g.show()
 
