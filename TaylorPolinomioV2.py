@@ -21,10 +21,6 @@ def PolTaylor(a, n, func_str):
     g[1].line_color = 'r'  # Color rojo para el polinomio de Taylor
     g.show()
 
-# Solicitar al usuario los datos necesarios
-func_str = input('Introduzca la función (en términos de x - Ej. ln(x), cos(x), exp(x)): ')
-a = float(input('Introduzca el valor en torno a qué punto desea el polinomio (Eje X): '))
-n = int(input('Introduzca el orden del polinomio de Taylor: '))
-
-# Llamar a la función con los datos ingresados
-PolTaylor(a, n, func_str)
+# Este bloque asegura que no se ejecute nada al importar
+if __name__ == "__main__":
+    print("Este archivo está diseñado para ser importado como módulo.")
