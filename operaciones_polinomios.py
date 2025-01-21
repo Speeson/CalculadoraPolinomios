@@ -12,7 +12,7 @@ Q(x) = x**2 + 3
 import sympy
 
 #Obtenes los dos polinomios introducidos por el usuario
-P1 = input("Primer Polinomio: ")
+P1 = input("Primer Polinomio (Formato: a*x**n(orden) + b*x**n-1(orden-1) etc): ")
 P2 = input("Segundo Polinomio: ")
 print("\n")
 
@@ -45,4 +45,4 @@ resultDiv = div(Poly1, Poly2)
 resultRes = res(Poly1, Poly2)
 
 #Mostramos el valor que deseemos
-print("Resultado: ", resultMult)
+print("Resultado: ", resultDiv)
