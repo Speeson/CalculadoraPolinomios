@@ -1,7 +1,8 @@
 import TaylorPolinomioV2
 
 def mostrar_menu():
-    print("\nMenu Principal")
+    print("\n---- Herramientas de Gestión Polinómicas ----")
+    print("\n---- Menu Principal ----")
     print("1. Generar Polinomio de Taylor")
     print("2. Opción 2 (christian)")
     print("3. Opción 3 (gonzalo")
