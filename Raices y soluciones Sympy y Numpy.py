@@ -1,5 +1,6 @@
 from sympy import symbols, solve
 import numpy as np
+def raices():
 # Raíces y soluciones simbólicas con SymPy
 
 # Define la variable simbólica
@@ -26,3 +27,5 @@ raices2 = np.roots(coeficientes)
 
 # Muestra las raíces
 print(f"Raíces: {raices2}")
+if _name_ == "_main_":
+    raices()

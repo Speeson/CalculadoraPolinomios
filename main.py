@@ -19,7 +19,7 @@ def main():
         if opcion == "1":    
             TaylorPolinomioV2.PolTaylor() # Llamar directamente a la función que gestiona todo en el módulo TaylorPolinomioV2
         elif opcion == "2":
-            print("Opción 2 aqui tu funcion chrissszzz (aún no implementada).")
+            raices() #Llama directamente a la funcion que gestiona todo en el modulo de raices y soluciones.
         elif opcion == "3":
             print("Opción 3 aqui tu funcion marotooo (aún no implementada).")
         elif opcion == "4":
