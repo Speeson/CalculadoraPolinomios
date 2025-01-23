@@ -2,6 +2,7 @@ import TaylorPolinomioV2 # Importar el módulo que contiene la función que gene
 # from TaylorPolinomioV2 import PolTaylor # También se puede importar la función directamente y no será necesario llamarla con el nombre del módulo
 from Raices import raices
 from factorizar_polinomiosV2 import factorizar_polinomio
+from operaciones_polinomiosv3 import operaciones_polinomio
 
 def mostrar_menu():
     print("\n---- Herramientas de Gestión Polinómicas ----")
@@ -10,7 +11,7 @@ def mostrar_menu():
     print("2. Hallar raíces de un polinomio")
     print("3. Evaluar un polinomio en un punto (x)")
     print("4. Factorizar un polinomio")
-    print("5. Opción 5 (carol)")
+    print("5. Operaciones con polinomios")
     print("6. Salir")
 
 def main():
@@ -27,7 +28,7 @@ def main():
         elif opcion == "4":
             factorizar_polinomio() #Llama directamente a la funcion que gestiona todo en el modulo de factorizar_polinomiosV2
         elif opcion == "5":
-            print("Opción 5 aqui tu funcion carooool (aún no implementada).")
+            operaciones_polinomio() #Llama directamente a la funcion que gestiona todo en el modulo de operaciones_polinomiosv3
         elif opcion == "6":
             print("Saliendo del programa. ¡Hasta luego!")
             break

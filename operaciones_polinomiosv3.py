@@ -5,6 +5,7 @@ Algoritmo para la resolución de operaciones entre 2 polinomios
 # Importamos la librería SymPy para usar variables simbólicas (x, y)
 import sympy
 
+
 # Definimos los símbolos
 sympy.init_printing()
 x, y = sympy.symbols('x y')
@@ -32,7 +33,7 @@ def div(p1, p2):
     return p1 / p2
 
 # Menú para elegir la operación
-def elegir_operacion():
+def operaciones_polinomio():
     print("Elige una operación:")
     print("1. Multiplicar")
     print("2. Sumar")

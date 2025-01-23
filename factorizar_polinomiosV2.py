@@ -25,10 +25,14 @@ def factorizar_polinomio():
     factores_polinomio = factor(polinomio)
 
     # Mostrar el polinomio original
+    print("\n------------------------------------------")
     print(f"Polinomio original: {polinomio}")
+    print("\------------------------------------------")
 
     # Mostrar la factorización
+    print("\n------------------------------------------")
     print(f"Factorización del polinomio: {factores_polinomio}")
+    print("\------------------------------------------")
     
 if __name__ == "__main__":
     factorizar_polinomio()
