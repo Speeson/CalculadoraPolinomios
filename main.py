@@ -1,11 +1,12 @@
 import TaylorPolinomioV2 # Importar el módulo que contiene la función que genera el polinomio de Taylor
 # from TaylorPolinomioV2 import PolTaylor # También se puede importar la función directamente y no será necesario llamarla con el nombre del módulo
+from Raices import raices
 
 def mostrar_menu():
     print("\n---- Herramientas de Gestión Polinómicas ----")
     print("\n---- Menu Principal ----")
     print("1. Generar Polinomio de Taylor")
-    print("2. Opción 2 (christian)")
+    print("2. Hallar raíces de un polinomio")
     print("3. Opción 3 (gonzalo")
     print("4. Opción 4 (natalia)")
     print("5. Opción 5 (carol)")
