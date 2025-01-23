@@ -1,4 +1,5 @@
-import TaylorPolinomioV2
+import TaylorPolinomioV2 # Importar el módulo que contiene la función que genera el polinomio de Taylor
+# from TaylorPolinomioV2 import PolTaylor # También se puede importar la función directamente y no será necesario llamarla con el nombre del módulo
 
 def mostrar_menu():
     print("\n---- Herramientas de Gestión Polinómicas ----")
