@@ -2,10 +2,23 @@ from math import *
 import sympy as sp
 from sympy.plotting import plot
 
-def PolTaylor(a, n, func_str):
+def PolTaylor():
+    """
+    Genera el polinomio de Taylor solicitando los parámetros al usuario.
+    """
     x = sp.symbols('x')  # Definimos la variable X
-    f = sp.sympify(func_str)  # Introduciremos la función a la cual nos querremos aproximar
+    
+    # Solicitar los parámetros al usuario
+    print("\n--- Generador de Polinomio de Taylor ---")
+    func_str = input('Introduzca la función (en términos de x - Ej. ln(x), cos(x), exp(x)): ')
+    a = float(input('Introduzca el valor en torno a qué punto desea el polinomio (Eje X): '))
+    n = int(input('Introduzca el orden del polinomio de Taylor: '))
+
+    # Convertir la entrada de la función a formato simbólico
+    f = sp.sympify(func_str)
     F = f  # Copia de la función original
+
+    # Construcción del polinomio de Taylor
     T = f.subs(x, a)  # Término independiente
     for k in range(1, n + 1):
         dfk = sp.diff(f, x)  # Derivada k-ésima
@@ -15,7 +28,7 @@ def PolTaylor(a, n, func_str):
     print("\nPolinomio de Taylor:")
     print(sp.expand(T))  # Expande el polinomio para mostrarlo en su forma estándar
 
-    # En este apartado se mostrará la función original y el polinomio de Taylor en una gráfica
+    # Mostrar la función original y el polinomio de Taylor en una gráfica
     g = plot(F, T, (x, a - 3, a + 3), title='Polinomio de Taylor', show=False)
     g[0].line_color = 'g'  # Color verde para la función original
     g[1].line_color = 'r'  # Color rojo para el polinomio de Taylor
@@ -23,4 +36,4 @@ def PolTaylor(a, n, func_str):
 
 # Este bloque asegura que no se ejecute nada al importar
 if __name__ == "__main__":
-    print("Este archivo está diseñado para ser importado como módulo.")
+    PolTaylor()

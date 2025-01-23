@@ -15,12 +15,8 @@ def main():
         mostrar_menu()
         opcion = input("Seleccione una opción: ")
         
-        if opcion == "1": # Para evitar que se ejecute la función directamente al importar, se solicitarán los parámetros en el main
-            print("\nGenerador de Polinomios de Taylor") 
-            func_str = input('Introduzca la función (en términos de x - Ej. ln(x), cos(x), exp(x)): ')
-            a = float(input('Introduzca el valor en torno a qué punto desea el polinomio (Eje X): '))
-            n = int(input('Introduzca el orden del polinomio de Taylor: '))
-            TaylorPolinomioV2.PolTaylor(a, n, func_str)
+        if opcion == "1":    
+            TaylorPolinomioV2.PolTaylor() # Llamar directamente a la función que gestiona todo en el módulo TaylorPolinomioV2
         elif opcion == "2":
             print("Opción 2 aqui tu funcion chrissszzz (aún no implementada).")
         elif opcion == "3":
