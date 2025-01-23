@@ -7,13 +7,13 @@ x = symbols('x')
 polinomio = x**3 - 6*x**2 + 11*x - 6
 
 # Factorizar el polinomio
-factores = factor(polinomio)
+factores_polinomio = factor(polinomio)
 
 # Mostrar el polinomio original
 print(f"Polinomio original: {polinomio}")
 
 # Mostrar la factorización
-print(f"Factorización del polinomio: {factores}")
+print(f"Factorización del polinomio: {factores_polinomio}")
 
 
 
