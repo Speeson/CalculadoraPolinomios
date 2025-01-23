@@ -1,31 +1,36 @@
-from sympy import symbols, solve
 import numpy as np
+from sympy import symbols, solve
+
 def raices():
-    # Raíces y soluciones simbólicas con SymPy
+    # Solicita los coeficientes del polinomio al usuario
+    print("Vamos a calcular las raíces de un polinomio.")
+    print("El polinomio debe estar en la forma a*x**n + b*x**(n-1) + ... + c = 0")
+    
+    grado = int(input("Introduce el grado del polinomio (n): "))
+    coeficientes = []
+
+    for i in range(grado, -1, -1):
+        coef = float(input(f"Introduce el coeficiente de x^{i}: "))
+        coeficientes.append(coef)
 
     # Define la variable simbólica
     x = symbols('x')
 
-    # Define el polinomio
-    polinomio = x**3 - 6*x**2 + 11*x - 6
+    # Construye el polinomio simbólicamente
+    polinomio = sum(coeficientes[i] * x**(grado - i) for i in range(len(coeficientes)))
 
-    # Encuentra las raíces del polinomio
-    raices = solve(polinomio, x)
+    # Encuentra las raíces simbólicas
+    raices_simbolicas = solve(polinomio, x)
 
-    # Muestra las raíces
+    # Muestra las raíces simbólicas
     print(f"Polinomio: {polinomio}")
-    print(f"Raíces: {raices}")
+    print(f"Raíces simbólicas: {raices_simbolicas}")
 
-    #Aproximación numérica (por ejemplo, para polinomios con raíces
-    #complejas o con coeficientes decimales), usando NumPy:
+    # Encuentra las raíces numéricas usando NumPy
+    raices_numericas = np.roots(coeficientes)
 
-    # Coeficientes del polinomio (en orden descendente)
-    coeficientes = [1, -6, 11, -6]  # x^3 - 6x^2 + 11x - 6
+    # Muestra las raíces numéricas
+    print(f"Raíces numéricas (aproximadas): {raices_numericas}")
 
-    # Encuentra las raíces del polinomio
-    raices2 = np.roots(coeficientes)
-
-    # Muestra las raíces
-    print(f"Raíces: {raices2}")
 if __name__ == "__main__":
     raices()
