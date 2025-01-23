@@ -1,4 +1,5 @@
-import TaylorPolinomioV2
+import TaylorPolinomioV2 # Importar el módulo que contiene la función que genera el polinomio de Taylor
+# from TaylorPolinomioV2 import PolTaylor # También se puede importar la función directamente y no será necesario llamarla con el nombre del módulo
 
 def mostrar_menu():
     print("\n---- Herramientas de Gestión Polinómicas ----")
@@ -15,14 +16,10 @@ def main():
         mostrar_menu()
         opcion = input("Seleccione una opción: ")
         
-        if opcion == "1": # Para evitar que se ejecute la función directamente al importar, se solicitarán los parámetros en el main
-            print("\nGenerador de Polinomios de Taylor") 
-            func_str = input('Introduzca la función (en términos de x - Ej. ln(x), cos(x), exp(x)): ')
-            a = float(input('Introduzca el valor en torno a qué punto desea el polinomio (Eje X): '))
-            n = int(input('Introduzca el orden del polinomio de Taylor: '))
-            TaylorPolinomioV2.PolTaylor(a, n, func_str)
+        if opcion == "1":    
+            TaylorPolinomioV2.PolTaylor() # Llamar directamente a la función que gestiona todo en el módulo TaylorPolinomioV2
         elif opcion == "2":
-            print("Opción 2 aqui tu funcion chrissszzz (aún no implementada).")
+            raices() #Llama directamente a la funcion que gestiona todo en el modulo de raices y soluciones.
         elif opcion == "3":
             print("Opción 3 aqui tu funcion marotooo (aún no implementada).")
         elif opcion == "4":
@@ -37,3 +34,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
