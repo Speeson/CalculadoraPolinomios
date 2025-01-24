@@ -44,8 +44,8 @@ def PolTaylor():
     plt.plot(x_vals, y_taylor, label=f'Polinomio de Taylor (Orden {n})', color='red', linestyle='--', linewidth=2)
     
     # Añadir etiquetas y leyenda
-    plt.axhline(0, color='black', linewidth=1, linestyle='--')
-    plt.axvline(0, color='black', linewidth=1, linestyle='--')
+    plt.axhline(0, color='black', linewidth=1.5, linestyle='--')
+    plt.axvline(0, color='black', linewidth=1.5, linestyle='--')
     plt.title('Aproximación con el Polinomio de Taylor', fontsize=16)
     plt.xlabel('x', fontsize=14)
     plt.ylabel('f(x)', fontsize=14)
