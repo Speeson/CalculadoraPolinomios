@@ -1,8 +1,10 @@
-import TaylorPolinomioV2 # Importar el módulo que contiene la función que genera el polinomio de Taylor
+# import TaylorPolinomioV2 # Importar el módulo que contiene la función que genera el polinomio de Taylor
 # from TaylorPolinomioV2 import PolTaylor # También se puede importar la función directamente y no será necesario llamarla con el nombre del módulo
+from TaylorPolinomioV3Numpy import PolTaylor
 from Raices import raices
 from factorizar_polinomiosV2 import factorizar_polinomio
 from operaciones_polinomiosv3 import operaciones_polinomio
+
 
 def mostrar_menu():
     print("\n---- Herramientas de Gestión Polinómicas ----")
@@ -20,7 +22,7 @@ def main():
         opcion = input("Seleccione una opción: ")
         
         if opcion == "1":    
-            TaylorPolinomioV2.PolTaylor() # Llamar directamente a la función que gestiona todo en el módulo TaylorPolinomioV2
+            PolTaylor() # Llamar directamente a la función que gestiona todo en el módulo TaylorPolinomioV2
         elif opcion == "2":
             raices() #Llama directamente a la funcion que gestiona todo en el modulo de raices y soluciones.
         elif opcion == "3":
