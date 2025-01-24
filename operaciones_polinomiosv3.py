@@ -80,4 +80,4 @@ def operaciones_polinomio():
 
 # Este bloque asegura que no se ejecute nada al importar
 if __name__ == "__main__":
-    print("Este archivo está diseñado para ser importado como módulo.")
+    operaciones_polinomio()
