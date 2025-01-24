@@ -11,9 +11,13 @@ def pedir_polinomio():
 def evaluar_polinomio(polinomio, valor_x):
     return polinomio.subs('x', valor_x)
 
-# Ejemplo de uso
-if __name__ == "__main__":
+# Función para realizar la funcionalidad 3 del menú principal
+def evalPolinomio():
     polinomio = pedir_polinomio()  # Pedimos el polinomio al usuario
     valor_x = float(input("Introduce el valor de x para evaluar el polinomio: "))  # Pedimos el valor de x
     resultado = evaluar_polinomio(polinomio, valor_x)
     print(f"El valor del polinomio para x = {valor_x} es: {resultado}")
+
+# Este bloque asegura que no se ejecute nada al importar
+if __name__ == "__main__":
+    evalPolinomio()
