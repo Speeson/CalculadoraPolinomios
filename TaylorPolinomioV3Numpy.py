@@ -34,7 +34,7 @@ def PolTaylor():
     taylor_lambda = sp.lambdify(x, T, 'numpy')  # Polinomio de Taylor
 
     # Rango de valores alrededor del punto `a`
-    x_vals = np.linspace(a - 3, a + 3, 400)
+    x_vals = np.linspace(a - 5, a + 5, 400)
     y_func = func_lambda(x_vals)
     y_taylor = taylor_lambda(x_vals)
 
@@ -44,8 +44,8 @@ def PolTaylor():
     plt.plot(x_vals, y_taylor, label=f'Polinomio de Taylor (Orden {n})', color='red', linestyle='--', linewidth=2)
     
     # Añadir etiquetas y leyenda
-    plt.axhline(0, color='black', linewidth=0.5, linestyle='--')
-    plt.axvline(0, color='black', linewidth=0.5, linestyle='--')
+    plt.axhline(0, color='black', linewidth=1, linestyle='--')
+    plt.axvline(0, color='black', linewidth=1, linestyle='--')
     plt.title('Aproximación con el Polinomio de Taylor', fontsize=16)
     plt.xlabel('x', fontsize=14)
     plt.ylabel('f(x)', fontsize=14)

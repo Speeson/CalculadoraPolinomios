@@ -29,7 +29,7 @@ def PolTaylor():
     print(sp.expand(T))  # Expande el polinomio para mostrarlo en su forma estándar
 
     # Mostrar la función original y el polinomio de Taylor en una gráfica
-    g = plot(F, T, (x, a - 3, a + 3), title='Polinomio de Taylor (Función en rojo)', show=False)
+    g = plot(F, T, (x, a - 5, a + 5), title='Polinomio de Taylor (Función en rojo)', show=False)
     g[0].line_color = 'g'  # Color verde para la función original
     g[1].line_color = 'r'  # Color rojo para el polinomio de Taylor
     g.show()

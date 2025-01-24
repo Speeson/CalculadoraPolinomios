@@ -1,4 +1,3 @@
-# import TaylorPolinomioV2 # Importar el módulo que contiene la función que genera el polinomio de Taylor
 # from TaylorPolinomioV2 import PolTaylor # También se puede importar la función directamente y no será necesario llamarla con el nombre del módulo
 from TaylorPolinomioV3Numpy import PolTaylor
 from Raices import raices
