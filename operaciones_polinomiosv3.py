@@ -1,37 +1,21 @@
-"""
-Algoritmo para la resolución de operaciones entre 2 polinomios
-"""
-
-# Importamos la librería SymPy para usar variables simbólicas (x, y)
-import sympy
-
-
-# Definimos los símbolos
-sympy.init_printing()
+import sympy # Importamos la librería SymPy para usar variables simbólicas (x, y)
+sympy.init_printing() # Definimos los símbolos
 x, y = sympy.symbols('x y')
-
-# Declaramos una función para obtener los polinomios
-def obtener_polinomios():
+def obtener_polinomios(): # Declaramos una función para obtener los polinomios
     P1 = input("Primer Polinomio (Formato: a*x**n(orden) + b*x**n-1(orden-1) etc): ")
     P2 = input("Segundo Polinomio (Formato: a*x**n(orden) + b*x**n-1(orden-1) etc): ")
-    # Luego almacenamos en variables los dos polinomios procesados por la función Poly de sympy
-    Poly1 = sympy.Poly(P1)
+    Poly1 = sympy.Poly(P1)     # Luego almacenamos en variables los dos polinomios procesados por la función Poly de sympy
     Poly2 = sympy.Poly(P2)
     return Poly1, Poly2
-
 # Declaramos una función para cada operación
 def mult(p1, p2):
     return p1 * p2
-
 def suma(p1, p2):
     return p1 + p2
-
 def res(p1, p2):
     return p1 - p2
-
 def div(p1, p2):
     return p1 / p2
-
 # Menú para elegir la operación
 def operaciones_polinomio():
     print("Elige una operación:")
@@ -40,7 +24,6 @@ def operaciones_polinomio():
     print("3. Restar")
     print("4. Dividir")
     print("0. Salir")
-
     while True:
         try:
             opcion = int(input("Introduce el número de la operación (0-4): "))
@@ -77,7 +60,6 @@ def operaciones_polinomio():
             print("Entrada inválida. Por favor, introduce un número.")
         except ZeroDivisionError:
             print("Error: División por cero no permitida.")
-
 # Este bloque asegura que no se ejecute nada al importar
 if __name__ == "__main__":
     operaciones_polinomio()
