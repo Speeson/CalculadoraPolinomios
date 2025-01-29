@@ -34,7 +34,7 @@ def PolTaylor():
     taylor_lambda = sp.lambdify(x, T, 'numpy')  # Polinomio de Taylor
 
     # Rango de valores alrededor del punto `a`
-    x_vals = np.linspace(a - 5, a + 5, 400)
+    x_vals = np.linspace(a - 5, a + 5, 400) # Se puede ajustar el rango de visualización
     y_func = func_lambda(x_vals)
     y_taylor = taylor_lambda(x_vals)
 

@@ -1,4 +1,4 @@
-# from TaylorPolinomioV2 import PolTaylor # También se puede importar la función directamente y no será necesario llamarla con el nombre del módulo
+# import TaylorPolinomioV2 # También se puede importar el archivo directamente pero será necesario llamarla con el nombre del archivo seguido de la función
 from TaylorPolinomioV3Numpy import PolTaylor
 from Raices import raices
 from evaluacionPolinomio import evalPolinomio
