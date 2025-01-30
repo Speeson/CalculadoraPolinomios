@@ -4,6 +4,7 @@ from Raices import raices
 from evaluacionPolinomio import evalPolinomio
 from factorizar_polinomiosV2 import factorizar_polinomio
 from operaciones_polinomiosv3 import operaciones_polinomio
+from derivadaIntegral import derivadaIntegral
 
 
 def mostrar_menu():
@@ -14,7 +15,8 @@ def mostrar_menu():
     print("3. Evaluar un polinomio en un punto (x)")
     print("4. Factorizar un polinomio")
     print("5. Operaciones con polinomios")
-    print("6. Salir")
+    print("6. Derivadas e Integrales de un polinomio ")
+    print("7. Salir")
 
 def main():
     while True:
@@ -32,6 +34,8 @@ def main():
         elif opcion == "5":
             operaciones_polinomio() #Llama directamente a la funcion que gestiona todo en el modulo de operaciones_polinomiosv3
         elif opcion == "6":
+            derivadaIntegral() #Llama directamente a la funcion que gestiona todo en el modulo de derivadaIntegral
+        elif opcion == "7":
             print("Saliendo del programa. ¡Hasta luego!")
             break
         else:

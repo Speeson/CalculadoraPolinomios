@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt 
 from sympy import symbols, diff, integrate, sympify
 
 def derivadaIntegral():
@@ -19,5 +20,3 @@ def derivadaIntegral():
     integral = integrate(p, x)
     print(f"Integral del polinomio (indefinida): {integral} + C")
 
-if __name__ == "__main__":
-    derivadaIntegral()
