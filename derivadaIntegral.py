@@ -1,14 +1,15 @@
-from sympy import symbols, diff, integrate
+from sympy import symbols, diff, integrate, sympify
 
 def derivadaIntegral():
     # Definir la variable simbólica
     x = symbols('x')
 
-    # Definir el polinomio
-    p = x**3 - 6*x**2 + 11*x - 6
+    # Pedir al usuario que introduzca el polinomio
+    polinomio_str = input("Introduce el polinomio en términos de x (ejemplo: x**3 - 6*x**2 + 11*x - 6): ")
+    p = sympify(polinomio_str)  # Convierte la cadena en un objeto simbólico
 
     # Mostrar el polinomio original
-    print(f"Polinomio original: {p}")
+    print(f"\nPolinomio original: {p}")
 
     # Calcular la derivada del polinomio
     derivada = diff(p, x)
