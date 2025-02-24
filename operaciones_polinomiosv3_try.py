@@ -1,4 +1,5 @@
 import sympy  # Importamos la librería SymPy para usar variables simbólicas (x, y)
+from sympy import Poly, SympifyError, sympify
 sympy.init_printing()  # Definimos los símbolos
 x, y = sympy.symbols('x y')
 
@@ -17,17 +18,46 @@ def obtener_polinomios():  # Declaramos una función para obtener los polinomios
 def mult(p1, p2):
     return p1 * p2
 
-def suma(p1, p2):
-    return p1 + p2
+def validar_polinomio(p):
+    """Función para validar si una entrada es un polinomio correcto."""
+    try:
+        # Usamos sympify para intentar interpretar la cadena como una expresión matemática
+        if isinstance(p, str):
+            p = sympify(p)  # Esto intenta convertir la cadena en una expresión válida
+        if not isinstance(p, Poly):
+            raise TypeError("El polinomio no es válido.")
+        return p
+    except (SympifyError, TypeError) as e:
+        raise Exception(f"Error al procesar el polinomio: {e}")
 
+def suma(p1, p2):
+    """Función para sumar dos polinomios."""
+    try:
+        # Validar si los polinomios son válidos
+        p1 = validar_polinomio(p1)
+        p2 = validar_polinomio(p2)
+
+        # Realizar la suma de los polinomios si son válidos
+        return p1 + p2
+    except Exception as e:
+        raise Exception(f"Error al sumar los polinomios: {e}")
+    
 def res(p1, p2):
     return p1 - p2
 
 def div(p1, p2):
-    # Verificación de división por cero
-    if p2.as_expr() == 0:
+    # Si p2 es un polinomio y es cero
+    if isinstance(p2, Poly) and p2.is_zero:  # Verificamos si p2 es un polinomio cero
         raise ZeroDivisionError("División por cero no permitida.")
-    return p1 / p2
+    
+    # Si p2 es un número entero o flotante
+    elif isinstance(p2, (int, float)):
+        if p2 == 0:  # Verificamos si p2 es cero
+            raise ZeroDivisionError("División por cero no permitida.")
+        return p1 / p2  # Realizamos la división
+
+    # Si no es un polinomio ni un número, lanzamos un error
+    raise TypeError("Tipo de dato no válido para la división.")
 
 # Menú para elegir la operación
 def operaciones_polinomio():
