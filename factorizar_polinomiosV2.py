@@ -3,7 +3,7 @@ from sympy import symbols, factor
 def factorizar_polinomio():
     # Definir la variable simbólica
     x = symbols('x')
-
+try:
     # Solicitar los coeficientes del polinomio al usuario
     print("Vamos a calcular la factorización de un polinomio.")
     print("El polinomio debe estar en la forma a*x**n + b*x**(n-1) + ... + c = 0")
@@ -33,6 +33,11 @@ def factorizar_polinomio():
     print("\n------------------------------------------")
     print(f"Factorización del polinomio: {factores_polinomio}")
     print("\------------------------------------------")
+    
+except ValueError as e:
+    print(f"Error: Entrada no valida {e}")
+except Exception as e:
+    print(f"Se produjo un error inesperado: {e}")
     
 if __name__ == "__main__":
     factorizar_polinomio()
