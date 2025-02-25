@@ -20,3 +20,5 @@ def derivadaIntegral():
     integral = integrate(p, x)
     print(f"Integral del polinomio (indefinida): {integral} + C")
 
+if __name__ == "__main__":
+    derivadaIntegral()
